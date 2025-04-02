@@ -1,0 +1,674 @@
+/* RESET GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ENCABEZADO Y LOGO */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header .logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff8c00; /* Color de hover */
+}
+
+/* SECCIÓN PRINCIPAL Y PRODUCTOS */
+.productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+.producto {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.producto h2 {
+    font-size: 22px;
+    color: #333;
+}
+
+.producto p {
+    color: #555;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.producto a {
+    color: #ff8c00;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.producto a:hover {
+    color: #ff4500; /* Color de hover */
+}
+
+/* DETALLE DEL PRODUCTO */
+.detalle-producto {
+    margin: 50px auto;
+    width: 80%;
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.detalle-producto img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.detalle-producto h1 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.detalle-producto p {
+    color: #555;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff4500;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* ESTILOS PARA LA SECCIÓN DE PRODUCTOS EN CADA CATEGORÍA */
+.productos h1 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* RESPONSIVO: Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+    .productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto {
+        width: 90%;
+    }
+
+    .detalle-producto img {
+        width: 80%;
+    }
+}
+/* Hover Effects */
+.jewelry-container {
+    display: flex;
+  }
+  
+  .jewelry-card {
+    flex: 1;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  .jewelry-card img {
+    object-fit: cover;
+    filter: grayscale(1);
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+  
+  .jewelry-card:hover {
+    flex: 10;
+    transition: 0.5s;
+  }
+  
+  .jewelry-card:hover img {
+    filter: none;
+    transition:0.5s;
+  }
+  
+  /* Products Section */
+  .contenedor {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+  }
+  
+  .contenedor .cartas {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    max-width: 100%;
+    height: 350px;
+    background: rgba(255, 255, 255, 0.636);
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgba(74, 2, 2, 0.315);
+  }
+  
+  .contenedor .cartas:hover {
+    height: 400px;
+  }
+  
+  .contenedor .cartas .caja-img {
+    position: absolute;
+    top: 20px;
+    width: 290px;
+    height: 220px;
+    background: #6a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  .contenedor .cartas:hover .caja-img {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7);
+  }
+  
+  .caja-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+  }
+  
+  .contenedor .cartas .contenido {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    height: 35px;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  .contenedor .cartas:hover .contenido {
+    top: 130px;
+    height: 250px;
+  }
+  /**Efecto hover**/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .barras {
+    display: flex;
+  }
+  
+  .tarjetas {
+    flex: 1;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  .tarjetas img {
+    object-fit: cover;
+    filter: grayscale(1);
+    padding: 5px;
+    border-radius: 10px;
+  }
+  
+  .tarjetas:hover {
+    flex: 10;
+    transition: 0.5;
+  }
+  
+  .tarjetas:hover img {
+    filter: none;
+    transition: 0.5s;
+  }
+  
+  /**Cartas Animadas**/
+  
+  .contenedor {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 100px 50px;
+      padding: 100px 50px;
+  }
+  
+  .contenedor .cartas {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      width: 350px;
+      max-width: 100%;
+      height: 300px;
+      background: white;
+      border-radius: 20px;
+      transition: 0.5s;
+      box-shadow: 0 35px 80px rgb(255, 0, 0);
+  }
+  
+  .contenedor .cartas:hover {
+      height: 400px;
+  }
+  
+  .contenedor .cartas .caja-img {
+      position: absolute;
+      top: 20px;
+      width: 300px;
+      height: 220px;
+      background: #000000;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: 0.5s;
+  }
+  
+  .contenedor .cartas:hover .caja-img {
+      top: -100px;
+      scale: 0.75;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contenedor .cartas .caja-img img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  
+  .contenedor .cartas .contenido {
+      position: absolute;
+      top: 252px;
+      width: 100%;
+      height: 35px;
+      padding: 0 30px;
+      text-align: center;
+      overflow: hidden;
+      transition: 0.5s;
+  }
+  
+  .contenedor .cartas:hover .contenido {
+      top: 130px;
+      height: 250px;
+  }
+  
+  .contenedor .cartas .contenido h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--crl);
+  }
+  
+  .contenedor .cartas .contenido p {
+      color: black;
+  }
+  
+  .contenedor .cartas .contenido a {
+      position: relative;
+      top: 15px;
+      display: inline-block;
+      padding: 12px 25px;
+      text-decoration: none;
+      background: var(--crl);
+      color: black;
+      font-weight: 500;
+  }
+  
+  .contenedor .cartas .contenido a:hover {
+      opacity: 0.8;
+      background-color: black;
+      color: aqua;
+  }
+  
+  /*Cartas de precio*/
+  @import url("https://fonts.googleapis.com/css?family=Roboto:400");
+  
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto", sans-serif !important;
+  }
+  
+  section {
+      width: 100%;
+      height: 100vh;
+      box-sizing: border-box;
+      padding: 100px 0;
+      background: #000000;
+  }
+  
+  .card {
+      position: relative;
+      max-width: 300px;
+      height: auto;
+      border-radius: 15px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+      transition: 0.5s;
+      overflow: hidden;
+  }
+  
+  .card:hover {
+      transform: scale(1.1);
+  }
+  
+  .col-sm-4:nth-child(1) .card, 
+  .col-sm-4:nth-child(1) .card .title .fas {
+      background: linear-gradient(-45deg, Cyan, Blue );
+  }
+  
+  .col-sm-4:nth-child(2) .card, 
+  .col-sm-4:nth-child(2) .card .title .fas {
+      background: linear-gradient(-45deg, Blue, Red );
+  }
+  
+  .col-sm-4:nth-child(3) .card, 
+  .col-sm-4:nth-child(3) .card .title .fas {
+      background: linear-gradient(-45deg, Lime, Green );
+  }
+  
+  .card:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background: rgba(255, 255, 255, 0.1);
+      z-index: 1;
+      transform: skewY(-5deg) scale(1.5);
+  }
+  
+  .title .fas {
+      color: #fff;
+      font-size: 60px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 100px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .title h2 {
+      position: relative;
+      margin: 20px 0 0;
+      padding: 0;
+      color: #000000;
+      font-size: 28px;
+      z-index: 2;
+  }
+  
+  .price {
+      position: relative;
+      z-index: 2;
+  }
+  
+  .price h4 {
+      margin: 0;
+      padding: 20px 0;
+      color: #000000;
+      font-size: 60px;
+  }
+  
+  .option {
+      position: relative;
+      z-index: 2;
+  }
+  
+  .option ul {
+      margin: 0;
+      padding: 0;
+  }
+  
+  .option ul li {
+      margin: 0 0 10px;
+      padding: 0;
+      list-style: none;
+      color: #000000;
+      font-size: 16px;
+  }
+  
+  .card a {
+      position: relative;
+      z-index: 2;
+      background: #fff;
+      color: #262626;
+      width: 150px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 40px;
+      display: block;
+      text-align: center;
+      margin: 20px auto 0;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card a:hover {
+      text-decoration: none;
+  }
+  
+  .bttn:hover {
+      background-color: #000000;
+      color: #66fcf1;
+  }
+  
+  /*Cartas giratorias*/
+  
+    body h1 {
+      text-align: center;
+    }
+    
+    .card-container {
+      position: relative;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      width: 100%;
+      align-self: center;
+    }
+    
+    .card {
+      margin: 20px 40px 40px 20px;
+      width: 300px;
+      height: 400px;
+      transform-style: preserve-3d;
+      perspective: 600px;
+      transition: 0.5s;
+    }
+    
+    .card .front {
+      border: solid 10px whitesmoke;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      transition: 0.5s;
+      -webkit-box-shadow: 0px 10px 13px -7px #000000,
+        5px 5px 15px 5px rgba(0, 0, 0, 0);
+      box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    }
+    
+    .card:hover .front {
+      transform: rotateY(-180deg);
+    }
+    
+    .card .back {
+      border: solid 10px whitesmoke;
+      width: 100%;
+      height: 100%;
+      background: #1d1d1d;
+      backface-visibility: hidden;
+      transform: rotateY(180deg);
+      transition: 0.5s;
+      -webkit-box-shadow: 0px 10px 13px -7px #000000,
+        5px 5px 15px 5px rgba(0, 0, 0, 0);
+      box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    
+    
+    }
+    
+    .card:hover .back {
+      transform: rotateY(0deg);
+    }
+    
+    .card .back .details {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    
+    .card .back .details .caption {
+      font-weight: 100;
+      font-style: italic;
+    }
+    
+  
+    
+    .card .back .details .caption,
+    h2,
+    span {
+      color: whitesmoke;
+    }
+    
+    .social-icon {
+      padding: 10px;
+    }
+    
+    .social-icon a {
+      display: inline-block;
+      width: 36px;
+      background: #333;
+      text-align: center;
+      text-decoration: none;
+      color: whitesmoke;
+      border-radius: 50%;
+      transition: 0.5s;
+    }
+    
+    .social-icon a .fab {
+      line-height: 36px;
+    }
+    
+    .social-icon a:hover {
+      background: rgb(104, 240, 215);
+    }
+    
+    .social-icon a:hover i {
+      transition: 0.5s;
+      color: #333;
+    }
+  
+    .contenido a:hover {
+      opacity: 0.8;
+      background-color: black;
+      color: darkorange;
+  }
+  
